@@ -1,0 +1,99 @@
+<HTML>
+  <body style="background-color:#fa9938">
+  <h1 style="font-family:Courier New; text-align:center; font-size:40px">
+    dice roller 
+  </h1>
+  <div>
+  <img src="dice1.PNG" style="display:block; margin-left:auto; margin-right:auto" onclick="dice()">
+  </div>
+  <button style= "display:block; margin-left:auto; margin-right:auto; font-family:Courier New;
+  background-color: #ff471a" onclick="secondDice()">
+    add a second dice
+  </button>
+  
+  
+  <script>
+    function dice() 
+    {
+          var diceOption=Math.ceil(Math.random()*6);
+            if (diceOption==1){
+        document.getElementsByTagName("img")[0].src="dice1.PNG";
+      }
+      else if (diceOption==2){
+        document.getElementsByTagName("img")[0].src="dice2.PNG";
+      }
+        else if (diceOption==3){
+        document.getElementsByTagName("img")[0].src="dice3.PNG";
+      }
+        else if (diceOption==4){
+        document.getElementsByTagName("img")[0].src="dice4.PNG";
+      }
+        else if (diceOption==5){
+        document.getElementsByTagName("img")[0].src="dice5.PNG";
+      }
+      else {
+        document.getElementsByTagName("img")[0].src="dice6.PNG";
+      } 
+           var diceOption=Math.ceil(Math.random()*6);
+            if (diceOption==1){
+        document.getElementsByTagName("img")[1].src="dice1.PNG";
+      }
+      else if (diceOption==2){
+        document.getElementsByTagName("img")[1].src="dice2.PNG";
+      }
+        else if (diceOption==3){
+        document.getElementsByTagName("img")[1].src="dice3.PNG";
+      }
+        else if (diceOption==4){
+        document.getElementsByTagName("img")[1].src="dice4.PNG";
+      }
+        else if (diceOption==5){
+        document.getElementsByTagName("img")[1].src="dice5.PNG";
+      }
+      else {
+        document.getElementsByTagName("img")[1].src="dice6.PNG";
+      }
+       
+    }
+    
+    function secondDice()
+    {
+      var img1=document.createElement("img");
+     var images=document.getElementsByTagName("div")[0];
+      images.appendChild(img1);
+      document.getElementsByTagName("img")[1].src="dice1.PNG";
+      img1.setAttribute("style", "display:block; margin-left:auto; margin-right:auto");
+      img1.setAttribute("onClick","dice2()");
+     
+     
+    }
+    function dice2()
+    {
+          var diceOption=Math.ceil(Math.random()*6);
+            if (diceOption==1){
+        document.getElementsByTagName("img")[1].src="dice1.PNG";
+      }
+      else if (diceOption==2){
+        document.getElementsByTagName("img")[1].src="dice2.PNG";
+      }
+        else if (diceOption==3){
+        document.getElementsByTagName("img")[1].src="dice3.PNG";
+      }
+        else if (diceOption==4){
+        document.getElementsByTagName("img")[1].src="dice4.PNG";
+      }
+        else if (diceOption==5){
+        document.getElementsByTagName("img")[1].src="dice5.PNG";
+      }
+      else {
+        document.getElementsByTagName("img")[1].src="dice6.PNG";
+      }
+      
+    }
+    
+    
+  </script>
+  </body>
+  
+  
+</HTML>
